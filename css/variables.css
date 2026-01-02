@@ -33,6 +33,26 @@
     --color-neon-glow: rgba(0, 255, 163, 0.4);
     --color-neon-dark: #00CC82;
     
+    /* Futuristische Neon-Farben - Blau-Töne für CI */
+    --color-neon-cyan: #00F0FF;
+    --color-neon-cyan-glow: rgba(0, 240, 255, 0.5);
+    --color-neon-blue: #0066FF;
+    --color-neon-blue-glow: rgba(0, 102, 255, 0.5);
+    --color-neon-blue-light: #0099FF;
+    --color-neon-blue-light-glow: rgba(0, 153, 255, 0.5);
+    --color-neon-blue-dark: #0044CC;
+    --color-neon-blue-dark-glow: rgba(0, 68, 204, 0.5);
+    --color-neon-teal: #00D4FF;
+    --color-neon-teal-glow: rgba(0, 212, 255, 0.5);
+    --color-neon-orange: #FF6B35;
+    --color-neon-orange-glow: rgba(255, 107, 53, 0.5);
+    
+    /* Futuristische Gradienten - Blau-basiert */
+    --gradient-neon-1: linear-gradient(135deg, var(--color-neon) 0%, var(--color-neon-cyan) 50%, var(--color-neon-blue) 100%);
+    --gradient-neon-2: linear-gradient(135deg, var(--color-neon-blue-light) 0%, var(--color-neon-blue) 50%, var(--color-neon-teal) 100%);
+    --gradient-neon-3: linear-gradient(135deg, var(--color-neon) 0%, var(--color-neon-orange) 50%, var(--color-accent) 100%);
+    --gradient-cyber: linear-gradient(135deg, #0d7377 0%, #0066FF 25%, #0099FF 50%, #00F0FF 75%, #00FFA3 100%);
+    
     /* Neutrals - Warm Grays */
     --color-neutral-50: #fafaf9;
     --color-neutral-100: #f5f4f2;
@@ -129,6 +149,14 @@
                  0 10px 10px -5px rgba(28, 25, 23, 0.04);
     --shadow-glow: 0 0 40px rgba(13, 115, 119, 0.15);
     
+    /* Futuristische Glow-Effekte - Blau-basiert */
+    --shadow-neon-green: 0 0 20px rgba(0, 255, 163, 0.4), 0 0 40px rgba(0, 255, 163, 0.2), 0 0 60px rgba(0, 255, 163, 0.1);
+    --shadow-neon-cyan: 0 0 20px rgba(0, 240, 255, 0.4), 0 0 40px rgba(0, 240, 255, 0.2), 0 0 60px rgba(0, 240, 255, 0.1);
+    --shadow-neon-blue: 0 0 20px rgba(0, 102, 255, 0.4), 0 0 40px rgba(0, 102, 255, 0.2), 0 0 60px rgba(0, 102, 255, 0.1);
+    --shadow-neon-blue-light: 0 0 20px rgba(0, 153, 255, 0.4), 0 0 40px rgba(0, 153, 255, 0.2), 0 0 60px rgba(0, 153, 255, 0.1);
+    --shadow-neon-teal: 0 0 20px rgba(0, 212, 255, 0.4), 0 0 40px rgba(0, 212, 255, 0.2), 0 0 60px rgba(0, 212, 255, 0.1);
+    --shadow-neon-multi: 0 0 30px rgba(0, 255, 163, 0.3), 0 0 60px rgba(0, 240, 255, 0.2), 0 0 90px rgba(0, 102, 255, 0.1);
+    
     /* ===== Transitions ===== */
     --transition-fast: 150ms ease;
     --transition-base: 250ms ease;
@@ -144,15 +172,47 @@
     --z-tooltip: 600;
 }
 
-/* Dark Mode Support (Optional) */
+/* ===== Dark Mode ===== */
+[data-theme="dark"] {
+    /* Background Colors */
+    --color-background: #0a0e1a;
+    --color-surface: #141b2d;
+    --color-text: #f3f4f6;
+    --color-text-muted: #d1d5db;
+    --color-text-light: #9ca3af;
+    --color-border: #1f2937;
+    
+    /* Neutral Colors - Darker */
+    --color-neutral-50: #1f2937;
+    --color-neutral-100: #374151;
+    --color-neutral-200: #4b5563;
+    --color-neutral-300: #6b7280;
+    --color-neutral-400: #9ca3af;
+    --color-neutral-500: #d1d5db;
+    --color-neutral-600: #e5e7eb;
+    --color-neutral-700: #f3f4f6;
+    --color-neutral-800: #f9fafb;
+    --color-neutral-900: #ffffff;
+    
+    /* Shadows - Lighter for dark mode */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 
+                 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 
+                 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 
+                 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 40px rgba(13, 115, 119, 0.3);
+    
+    /* Glassmorphism - Darker */
+    --glass-background: rgba(20, 27, 45, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Mode Support (Optional - System Preference) */
 @media (prefers-color-scheme: dark) {
-    :root {
-        /* Uncomment to enable automatic dark mode */
-        /* --color-background: var(--color-neutral-900);
-        --color-surface: var(--color-neutral-800);
-        --color-text: var(--color-neutral-100);
-        --color-text-muted: var(--color-neutral-400);
-        --color-border: var(--color-neutral-700); */
+    :root:not([data-theme="light"]) {
+        /* Automatisch Dark Mode wenn System es bevorzugt und kein manueller Modus gesetzt */
     }
 }
 

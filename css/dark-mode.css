@@ -1,0 +1,510 @@
+/* ==========================================
+   Dark Mode Styles - KI-Prozessnavigator
+   ========================================== */
+
+/* ===== Header & Navigation ===== */
+[data-theme="dark"] .header {
+    background: rgba(10, 14, 26, 0.95);
+    border-bottom-color: rgba(0, 240, 255, 0.2);
+}
+
+[data-theme="dark"] .header.scrolled {
+    border-bottom-color: rgba(0, 240, 255, 0.3);
+    box-shadow: 0 2px 20px rgba(0, 240, 255, 0.15), 0 1px 2px rgba(0, 0, 0, 0.3);
+    background: rgba(10, 14, 26, 0.98);
+}
+
+[data-theme="dark"] .nav__link {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .nav__link:hover,
+[data-theme="dark"] .nav__link.active {
+    color: var(--color-neon-cyan);
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+}
+    
+/* ===== Hero Section ===== */
+[data-theme="dark"] .hero {
+    background: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 255, 163, 0.15), transparent),
+        radial-gradient(ellipse 60% 40% at 90% 80%, rgba(0, 240, 255, 0.12), transparent),
+        radial-gradient(ellipse 40% 30% at 10% 60%, rgba(0, 153, 255, 0.1), transparent),
+        radial-gradient(ellipse 50% 35% at 50% 50%, rgba(0, 102, 255, 0.08), transparent),
+        var(--color-background);
+}
+
+[data-theme="dark"] .hero::before {
+    background-image: 
+        linear-gradient(to right, rgba(0, 255, 163, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 240, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(45deg, rgba(0, 153, 255, 0.05) 1px, transparent 1px);
+}
+
+[data-theme="dark"] .hero__tag {
+    background: linear-gradient(135deg, rgba(0, 255, 163, 0.2) 0%, rgba(0, 240, 255, 0.15) 50%, rgba(0, 102, 255, 0.1) 100%);
+    border-color: rgba(0, 240, 255, 0.5);
+    color: var(--color-neon-cyan);
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.6), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4 {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7), 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+    
+/* ===== Cards ===== */
+[data-theme="dark"] .problem-card,
+[data-theme="dark"] .solution-card,
+[data-theme="dark"] .usecase-card,
+[data-theme="dark"] .pricing-card,
+[data-theme="dark"] .testimonial-card {
+    background: var(--color-surface);
+    border-color: var(--color-border);
+}
+
+[data-theme="dark"] .problem-card:hover,
+[data-theme="dark"] .solution-card:hover {
+    border-color: rgba(0, 255, 163, 0.4);
+    box-shadow: var(--shadow-neon-green);
+}
+
+[data-theme="dark"] .solution-card {
+    background: linear-gradient(135deg, rgba(0, 255, 163, 0.08), rgba(0, 240, 255, 0.05), var(--color-surface));
+    border-color: rgba(0, 240, 255, 0.3);
+}
+
+[data-theme="dark"] .usecase-card:hover {
+    border-color: rgba(0, 240, 255, 0.5);
+    box-shadow: var(--shadow-neon-cyan);
+}
+
+[data-theme="dark"] .pricing-card:hover {
+    border-color: rgba(0, 102, 255, 0.5);
+    box-shadow: var(--shadow-neon-blue);
+}
+
+[data-theme="dark"] .pricing-card--popular {
+    background: linear-gradient(180deg, rgba(0, 255, 163, 0.15) 0%, rgba(0, 240, 255, 0.08) 30%, var(--color-surface) 50%);
+    border-color: var(--color-neon);
+}
+
+[data-theme="dark"] .testimonial-card:hover {
+    border-color: rgba(0, 153, 255, 0.4);
+    box-shadow: var(--shadow-neon-blue-light);
+}
+    
+/* ===== Forms ===== */
+[data-theme="dark"] .form__input,
+[data-theme="dark"] .form__textarea {
+    background: var(--color-neutral-50);
+    border-color: var(--color-border);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .form__input:focus,
+[data-theme="dark"] .form__textarea:focus {
+    border-color: var(--color-neon-cyan);
+    box-shadow: 0 0 0 4px rgba(0, 240, 255, 0.1);
+}
+
+/* ===== Stats & Metrics ===== */
+[data-theme="dark"] .hero__stats {
+    background: linear-gradient(135deg, rgba(0, 255, 163, 0.12) 0%, rgba(0, 240, 255, 0.08) 50%, rgba(0, 102, 255, 0.05) 100%);
+    border-color: rgba(0, 240, 255, 0.4);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);
+}
+
+/* ===== Before/After ===== */
+[data-theme="dark"] .before-after-card {
+    background: linear-gradient(135deg, rgba(0, 255, 163, 0.08) 0%, rgba(0, 240, 255, 0.05) 50%, rgba(0, 102, 255, 0.03) 100%);
+    border-color: rgba(0, 240, 255, 0.4);
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);
+}
+
+/* ===== FAQ ===== */
+[data-theme="dark"] .faq-item {
+    background: var(--color-surface);
+    border-color: var(--color-border);
+}
+
+[data-theme="dark"] .faq-item:hover {
+    border-color: rgba(0, 240, 255, 0.4);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+}
+
+[data-theme="dark"] .faq-item.active {
+    border-color: rgba(0, 255, 163, 0.5);
+    box-shadow: 0 0 20px rgba(0, 255, 163, 0.25);
+}
+
+[data-theme="dark"] .faq-item__question {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7), 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .faq-item__answer p {
+    color: var(--color-text-muted);
+}
+
+/* ===== Lead Magnet ===== */
+[data-theme="dark"] .lead-magnet__content {
+    background: linear-gradient(135deg, rgba(0, 255, 163, 0.1), rgba(0, 240, 255, 0.08));
+    border-color: rgba(0, 240, 255, 0.3);
+}
+
+/* ===== Footer ===== */
+[data-theme="dark"] .footer {
+    background: var(--color-neutral-900);
+    border-top: 1px solid var(--color-border);
+}
+
+[data-theme="dark"] .footer__link {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .footer__link:hover {
+    color: var(--color-neon-cyan);
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+}
+
+/* ===== Scroll to Top ===== */
+[data-theme="dark"] .scroll-to-top {
+    background: var(--gradient-neon-1);
+    box-shadow: var(--shadow-neon-cyan);
+}
+
+[data-theme="dark"] .scroll-to-top:hover {
+    box-shadow: var(--shadow-neon-multi);
+}
+
+/* ===== Logo Placeholder ===== */
+[data-theme="dark"] .logo-placeholder {
+    background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-neutral-50) 100%);
+    border-color: rgba(0, 240, 255, 0.3);
+}
+
+[data-theme="dark"] .logo-placeholder:hover {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.15), rgba(0, 255, 163, 0.08));
+    border-color: var(--color-neon-cyan);
+}
+
+/* ===== Trust Bar ===== */
+[data-theme="dark"] .trust-bar {
+    background: linear-gradient(180deg, rgba(0, 255, 163, 0.05) 0%, var(--color-neutral-50) 50%, var(--color-background) 100%);
+    border-top-color: rgba(0, 240, 255, 0.2);
+    border-bottom-color: var(--color-border);
+}
+
+[data-theme="dark"] .trust-bar__text strong {
+    color: var(--color-neon-cyan);
+}
+
+[data-theme="dark"] .trust-bar__text em {
+    color: var(--color-neon);
+}
+
+/* ===== Problems Section ===== */
+[data-theme="dark"] .problems {
+    background: var(--color-background);
+}
+
+/* ===== Solutions Connector ===== */
+[data-theme="dark"] .connector-line {
+    background: linear-gradient(90deg, transparent, var(--color-primary-300), transparent);
+}
+
+[data-theme="dark"] .connector-text {
+    color: var(--color-neon-cyan);
+}
+
+/* ===== Use Cases Navigation ===== */
+[data-theme="dark"] .usecases__nav-btn {
+    background: var(--color-surface);
+    border-color: var(--color-border);
+    color: var(--color-text);
+}
+
+[data-theme="dark"] .usecases__nav-btn:hover {
+    background: var(--gradient-neon-1);
+    border-color: transparent;
+    color: white;
+}
+
+[data-theme="dark"] .usecases__dot {
+    background: var(--color-border);
+}
+
+[data-theme="dark"] .usecases__dot:hover,
+[data-theme="dark"] .usecases__dot.active {
+    background: var(--color-neon-cyan);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.6);
+}
+
+/* ===== Process Flow ===== */
+[data-theme="dark"] .usecase-card__flow {
+    background: var(--color-neutral-50);
+}
+
+[data-theme="dark"] .flow-step__icon {
+    background: var(--color-surface);
+    border-color: var(--color-border);
+}
+
+/* ===== Testimonials ===== */
+[data-theme="dark"] .testimonial-card__video {
+    background: linear-gradient(135deg, var(--color-neutral-200), var(--color-neutral-300));
+}
+
+[data-theme="dark"] .testimonial-card__quote {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .testimonial-card__author {
+    background: var(--color-neutral-50);
+}
+
+/* ===== Pricing ===== */
+[data-theme="dark"] .pricing-card__name {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7), 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .pricing-card__tagline {
+    color: #e5e7eb;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .price-amount {
+    color: #ffffff;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7), 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .problem-card__title,
+[data-theme="dark"] .solution-card__title {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7), 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .usecase-card__title {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7), 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Section Transitions ===== */
+[data-theme="dark"] .usecases {
+    background: linear-gradient(180deg, var(--color-neutral-50) 0%, var(--color-background) 100%);
+}
+
+[data-theme="dark"] .pricing {
+    background: var(--color-background);
+}
+
+[data-theme="dark"] .testimonials {
+    background: linear-gradient(180deg, var(--color-background) 0%, var(--color-neutral-50) 100%);
+}
+
+[data-theme="dark"] .faq-section {
+    background: var(--color-background);
+}
+
+[data-theme="dark"] .pricing::after,
+[data-theme="dark"] .faq-section::after {
+    background: linear-gradient(90deg, transparent, var(--color-border), transparent);
+}
+
+/* ===== Section Headers ===== */
+[data-theme="dark"] .section__tag {
+    color: var(--color-neon-cyan);
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .section__description {
+    color: #e5e7eb;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Hero Title ===== */
+[data-theme="dark"] .hero__title {
+    color: #ffffff;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7), 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .hero__title em {
+    text-shadow: 0 0 10px rgba(0, 255, 163, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+/* ===== Section Titles ===== */
+[data-theme="dark"] .section__title {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7), 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Body Text & Paragraphs ===== */
+[data-theme="dark"] body {
+    color: var(--color-text);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] p {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .hero__description {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .problem-card__text,
+[data-theme="dark"] .solution-card__text {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .usecase-card__description {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .pricing-card__tagline {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .stat__label {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .trust-bar__text {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Additional Text Elements ===== */
+[data-theme="dark"] .result-text {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .flow-step__label {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .author-name {
+    color: var(--color-text);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .author-role {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .lead-magnet__description {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .lead-magnet__title {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7), 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .metric-label {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .price-period {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .feature-disabled {
+    color: var(--color-text-light);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .pricing-card__features li {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .final-cta__title {
+    color: #ffffff;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .final-cta__description {
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .final-cta__trust {
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .social-proof-label {
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Footer ===== */
+[data-theme="dark"] .footer__tagline {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .footer__bottom {
+    color: var(--color-text-muted);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .footer__heading {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7), 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== DSGVO Section - Already has white text, but add shadows ===== */
+[data-theme="dark"] .dsgvo__title {
+    color: #ffffff;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7), 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .dsgvo__description {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .checklist-text {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .trust-badge__title {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .trust-badge__subtitle {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Buttons ===== */
+[data-theme="dark"] .btn--secondary {
+    border-color: rgba(0, 240, 255, 0.3);
+    color: var(--color-neon-cyan);
+}
+
+[data-theme="dark"] .btn--secondary:hover {
+    background: rgba(0, 240, 255, 0.1);
+    border-color: var(--color-neon-cyan);
+}
+

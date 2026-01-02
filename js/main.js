@@ -17,14 +17,16 @@ const DOM = {
     sections: document.querySelectorAll('section[id]'),
     faqItems: document.querySelectorAll('.faq-item'),
     scrollToTop: document.getElementById('scroll-to-top'),
-    heroTitle: document.querySelector('.typewriter')
+    heroTitle: document.querySelector('.typewriter'),
+    themeToggle: document.getElementById('theme-toggle')
 };
 
 // ===== State =====
 const state = {
     isMenuOpen: false,
     lastScrollY: 0,
-    hasTyped: false
+    hasTyped: false,
+    theme: localStorage.getItem('theme') || 'light'
 };
 
 // ===== Utility Functions =====
@@ -50,6 +52,28 @@ function throttle(func, limit = 100) {
             setTimeout(() => inThrottle = false, limit);
         }
     };
+}
+
+// ===== Theme Functions =====
+
+function initTheme() {
+    // Set initial theme
+    document.documentElement.setAttribute('data-theme', state.theme);
+    
+    // Update toggle button state
+    if (DOM.themeToggle) {
+        DOM.themeToggle.setAttribute('aria-label', state.theme === 'dark' ? 'Light Mode aktivieren' : 'Dark Mode aktivieren');
+    }
+}
+
+function toggleTheme() {
+    state.theme = state.theme === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', state.theme);
+    localStorage.setItem('theme', state.theme);
+    
+    if (DOM.themeToggle) {
+        DOM.themeToggle.setAttribute('aria-label', state.theme === 'dark' ? 'Light Mode aktivieren' : 'Dark Mode aktivieren');
+    }
 }
 
 // ===== Navigation Functions =====
@@ -943,6 +967,14 @@ function initUseCasesSlider() {
     // Initialize
     createDots();
     updateSlider();
+}
+
+// ===== Initialize Theme =====
+initTheme();
+
+// ===== Event Listeners =====
+if (DOM.themeToggle) {
+    DOM.themeToggle.addEventListener('click', toggleTheme);
 }
 
 // Run when DOM is ready
